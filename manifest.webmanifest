@@ -1,6 +1,6 @@
 {
-  "name": "Hesap Pusulası",
-  "short_name": "Hesap Pusulası",
+  "name": "Sepet Rotası",
+  "short_name": "Sepet Rotası",
   "description": "Market fiyatı karşılaştırma için özellik önerisi prototipi (demo verisi, bağımsız çalışma).",
   "lang": "tr",
   "start_url": "./",
