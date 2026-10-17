@@ -7,7 +7,7 @@ Market fiyatlarını karşılaştıran uygulamalar için bir **özellik önerisi
 
 ▶️ **Canlı demo:** https://denizozcan2030-dot.github.io/hesap-pusulasi/
 🎬 **Tanıtım videosu (3 dk 25 sn):** [Media/hesap-pusulasi-video.mp4](Media/hesap-pusulasi-video.mp4)
-
+https://github.com/user-attachments/assets/7fefbf47-1e87-451c-933b-f501a44e2b97
 - Tüm ürün, fiyat ve teslimat verileri **örnektir (demo verisi)**; gerçek fiyat değildir.
 - Hiçbir kamu kurumuyla resmî bir bağı yoktur ve onların onayını taşımaz.
 - Yapay zekâ desteğiyle geliştirilmiş bağımsız bir prototiptir.
