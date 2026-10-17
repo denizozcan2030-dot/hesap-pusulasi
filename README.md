@@ -7,15 +7,13 @@ Market fiyatlarını karşılaştıran uygulamalar için bir **özellik önerisi
 ▶️ **Canlı demo:** https://denizozcan2030-dot.github.io/hesap-pusulasi/
 🎬 **Tanıtım videosu (3 dk 25 sn):** [Media/hesap-pusulasi-video.mp4](Media/hesap-pusulasi-video.mp4)
 
-https://github.com/user-attachments/assets/5323bf6d-4c7a-4fc9-bfcd-97ed06ea26ed
-
 - Tüm ürün, fiyat ve teslimat verileri **örnektir (demo verisi)**; gerçek fiyat değildir.
 - Hiçbir kamu kurumuyla resmî bir bağı yoktur ve onların onayını taşımaz.
 - Yapay zekâ desteğiyle geliştirilmiş bağımsız bir prototiptir.
 - Bu herkese açık demoda fotoğraf, fiş ve Deno asistanı cevapları **örnektir (simüle)**: seçilen görsel gerçekten okunmaz, hazır örnek sonuç gösterilir. Ortak liste bu demoda tek tarayıcıda simüle edilir (gerçek paylaşım yoktur). Videodaki okuma ve ses tanıma da simüledir.
 - Fiyatları ve toplamları yapay zekâ değil, uygulamanın kural motoru hesaplar.
 
-Çalıştırmak için `index.html` dosyasını bir tarayıcıda açmak yeterlidir (kurulum gerekmez). Tasarım belgeleri `docs/` klasöründedir.
+Telefonda tarayıcı menüsünden **"Ana ekrana ekle"** diyerek uygulama gibi kullanılabilir (web uygulaması; mağaza uygulaması değildir). Çalıştırmak için `index.html` dosyasını bir tarayıcıda açmak yeterlidir (kurulum gerekmez). Tasarım belgeleri `docs/` klasöründedir.
 
 <a name="english"></a>
 ## English
@@ -25,14 +23,12 @@ A **feature-proposal prototype** for market price comparison apps: type your sho
 ▶️ **Live demo:** https://denizozcan2030-dot.github.io/hesap-pusulasi/
 🎬 **Walkthrough video (3 min 25 s, Turkish UI):** [Media/hesap-pusulasi-video.mp4](Media/hesap-pusulasi-video.mp4)
 
-https://github.com/user-attachments/assets/5323bf6d-4c7a-4fc9-bfcd-97ed06ea26ed
-
 - All products, prices and delivery data are **sample (demo) data**, not real prices.
 - It has no official affiliation with, and is not endorsed by, any public institution.
 - It is an independent prototype developed with AI assistance.
 - In this public demo, photo, receipt and "Deno" assistant responses are **simulated**: the image you choose is not actually read; a canned sample result is shown. The shared list is simulated in a single browser here (no real sharing). Reading and speech recognition in the video are simulated too.
 - Prices and totals are computed by the app's rule engine, not by AI.
 
-To run it, just open `index.html` in a browser (no installation). Design documents are in `docs/` (Turkish).
+On a phone you can use the browser menu's **"Add to Home screen"** to run it like an app (it is a web app, not an app-store app). To run it, just open `index.html` in a browser (no installation). Design documents are in `docs/` (Turkish).
 
 © 2026 All rights reserved.
