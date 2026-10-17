@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hesap Pusulası - Market Fiyatı prototipi</title>
+<meta name="theme-color" content="#1F5FBF"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hesap Pusulası"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-180.png"><title>Hesap Pusulası - Market Fiyatı prototipi</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap">
 <style>
 :root{--bg:#F3F6F9;--card:#fff;--ink:#14213D;--mute:#5B6B80;--line:#D8E0E8;--blue:#1F5FBF;--bi:#fff;--good:#17794F;--gb:#E4F4EC;--warn:#8A5200;--wb:#FFF1D6;--bad:#B3261E;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -990,4 +990,4 @@ function setNoCmp(v){NOCMP=!!v;const l=$('#mkl');if(l&&l.classList)l.classList.t
 $('#nocmp').onchange=()=>setNoCmp($('#nocmp').checked);
 (async()=>{try{if(false)return;const s=await YZX.use('sample');if(!s)return;const l=await s.limits().catch(()=>null);if(l&&l.images){RC={s,l};renderFav();try{agRender()}catch(e){}}}catch(e){}})();
 renderFav();
-</script></body></html>
+</script><script>if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}</script></body></html>
