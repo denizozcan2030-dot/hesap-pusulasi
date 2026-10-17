@@ -147,7 +147,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid c
 @media(min-width:800px){main{padding-top:24px}}
 </style></head><body><main>
 <div class="brand"><div class="bmark" aria-hidden="true">🛒</div><div><h1>Hesap Pusulası</h1><div class="sub">Market Fiyatı için özellik önerisi: listeyi ver, en uygun alışveriş planını gör.</div></div></div>
-<div class="demo">Demo verisi: ürünler, fiyatlar ve teslimat koşulları örnektir, gerçek değildir. KVKK onay ekranı demo için açılışta sorulmaz; "Gizlilik ve onaylarım" ile açılır.</div>
+<div class="demo">Demo verisi: ürünler, fiyatlar ve teslimat koşulları örnektir, gerçek değildir. Bu herkese açık demoda fotoğraf, fiş ve Deno cevapları ÖRNEKTİR (simüle): seçtiğin görsel gerçekten okunmaz, hazır örnek sonuç gösterilir. KVKK onay ekranı demo için açılışta sorulmaz; "Gizlilik ve onaylarım" ile açılır.</div>
 <button type="button" class="kvl" id="kvopen">🔒 Gizlilik ve onaylarım (KVKK)</button>
 <div class="steps"><button type="button" id="t1" class="on">Liste</button><button type="button" id="t2" disabled>Kontrol</button><button type="button" id="t3" disabled>Karşılaştırma</button></div>
 
@@ -238,7 +238,18 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid c
 </div></div>
 </main>
 <script>
-const YZX={use:async()=>null};
+const SMP=async(pr,opts)=>{pr=String(pr);
+ if(pr.startsWith('Bu görsel el yazısı'))return{text:JSON.stringify({lines:[{t:"10'lu yumurta",c:'high'},{t:'10 gr siyah zeytin',c:'low'},{t:'sıvı deterjan',c:'high'},{t:'1 lt yulaflı süt',c:'low'}]})};
+ if(pr.startsWith('Bu görsel bir market fişi,'))return{text:JSON.stringify({total:319.4,store:'Örnek Market',date:'2026-10-16',confidence:'high'})};
+ if(pr.startsWith('Sen Deno')){const T={};(opts&&opts.tools||[]).forEach(t=>T[t.name]=t);const f=async q=>{const r=await T.urunara.execute({sorgu:q});return r&&r[0]&&r[0].k};
+  const K={};for(const q of ['makarna','kıyma','yumurta','domates','peynir','zeytin','süt','pirinç','şeker','elma','tereyağı','çay']){K[q]=await f(q)}const u=(...a)=>a.map(x=>K[x]).filter(Boolean);
+  if(pr.includes('bugün yapılabilecek'))return{text:JSON.stringify({oneriler:[{tur:'Yemek',ad:'Kıymalı makarna',urunler:u('makarna','kıyma')},{tur:'Kahvaltı',ad:'Menemen',urunler:u('yumurta','domates')},{tur:'Aperatif',ad:'Peynir ve zeytin tabağı',urunler:u('peynir','zeytin')},{tur:'Tatlı',ad:'Sütlaç',urunler:u('süt','pirinç','şeker')}],liste:[],not:''})};
+  const liste=[['makarna',1],['kıyma',1],['yumurta',1],['domates',1],['peynir',1],['zeytin',1],['süt',2],['pirinç',1],['şeker',1],['elma',1],['tereyağı',1],['çay',1]].map(([q,n])=>K[q]?{k:K[q],miktar:n}:null).filter(Boolean);
+  await T.planKontrol.execute({satirlar:liste});
+  const D=['Pazartesi','Salı','Çarşamba','Perşembe','Cuma'];const kv=[['Menemen','Peynirli makarna','Kıymalı pilav','Elma dilimleri'],['Peynir ve zeytin tabağı','Domates çorbası ve ekmek','Kıymalı makarna',''],['Omlet','Pirinç pilavı ve yoğurt','Domatesli yumurta','Sütlaç'],['Tereyağlı tost','Mercimek yemeği','Közlenmiş domates ve peynir','Elmalı tatlı'],['Çay ve peynir kahvaltısı','Makarna salatası','Kıymalı pilav','']];
+  return{text:JSON.stringify({menu:D.map((g,i)=>({gun:g,kahvalti:kv[i][0],ogle:kv[i][1],aksam:kv[i][2],tatli:kv[i][3],urunler:[]})),liste,not:'Katalogda ekmek ve sebze olmadığı için menü sınırlıdır; tutarlar örnek katalogdan hesaplanır.'})}}
+ const ls=pr.split('Liste:\n')[1]||'';const items=ls.split('\n').filter(Boolean).map(l=>{const m=l.match(/^(\d+)\.\s*(.*)$/);const n=+m[1],t=m[2].toLowerCase();const fis=pr.startsWith('Bu görsel bir market fişidir');const N=fis?{'süt':'Süt 1L','tereyağı':'Tereyağı 250G','yumurta':'Yumurta 10LU','makarna':'Makarna 500G','kıyma':'Dana kıyma','pirinç':'Pirinç 1KG','şeker':'Toz şeker 1KG','çay':'Siyah çay 500G'}:{'makarna':'Makarna (fusilli)','peynir':'Ezine beyaz peynir','domates':'Salkım domates','süt':'Süt 1L','elma':'Elma (kg)','yumurta':'Yumurta 10LU'};const k=Object.keys(N).find(x=>t.includes(x));return k?{n,s:'var',line:N[k]}:{n,s:'belirsiz',line:null}});if(items.length&&!items.some(x=>x.s==='var')){const l0=ls.split('\n').filter(Boolean)[0].replace(/^\d+\.\s*/,'');items[0]={n:items[0].n,s:'var',line:l0}}return{text:JSON.stringify({items})}};SMP.limits=async()=>({images:true});
+const YZX={use:async n=>n==='sample'?SMP:null};
 
 const KVV='2026-10-14-v2';let KV={v:KVV,core:false,rc:false,vo:false,seen:false,d:null};try{const k=JSON.parse(localStorage.getItem('as_kvkk_v1')||'null');if(k&&k.v===KVV)KV=k}catch(e){}
 const KV_DEMO=true;/* Demo için KVKK ekranı açılışta sorulmaz. Yayından önce false yapılmalı. */if(KV_DEMO&&!KV.seen)KV={v:KVV,core:true,rc:true,vo:true,seen:true,d:null,demo:true};
