@@ -6,6 +6,11 @@ Market fiyatlarını karşılaştıran uygulamalar için bir **özellik önerisi
 
 ▶️ **Canlı demo:** https://denizozcan2030-dot.github.io/sepet-rotasi/
 
+
+https://github.com/user-attachments/assets/80904e51-d4fd-4e0c-840a-76c299103278
+
+
+
 - Tüm ürün, fiyat ve teslimat verileri **örnektir (demo verisi)**; gerçek fiyat değildir.
 - Hiçbir kamu kurumuyla resmî bir bağı yoktur ve onların onayını taşımaz.
 - Yapay zekâ desteğiyle geliştirilmiş bağımsız bir prototiptir.
@@ -21,6 +26,8 @@ Telefonda tarayıcı menüsünden **"Ana ekrana ekle"** diyerek uygulama gibi ku
 A **feature-proposal prototype** for market price comparison apps: type your shopping list, pick the exact product where a line is ambiguous, see the cheapest basket, and run an "did I forget something?" check before leaving the store.
 
 ▶️ **Live demo:** https://denizozcan2030-dot.github.io/sepet-rotasi/
+
+https://github.com/user-attachments/assets/80904e51-d4fd-4e0c-840a-76c299103278
 
 - All products, prices and delivery data are **sample (demo) data**, not real prices.
 - It has no official affiliation with, and is not endorsed by, any public institution.
